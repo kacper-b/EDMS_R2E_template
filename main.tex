@@ -1,0 +1,53 @@
+\documentclass{style/accnote}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \title{title}
+    \author{AUTHORS}
+    \institute{CERN, Geneva, Switzerland}
+    
+    
+    \def\docnumber{EDMS}
+    \def\edmsnumber{12345}
+    \def\revnumber{1}
+    \def\emailaddress{XXX}
+    \date{31-10-2022}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{setup/setup2.tex}
+\input{setup/constants}
+
+\newcounter{qcounter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addbibresource{references.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{sec/title_page}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \section{Introduction}
+    
+        
+        
+    \section{Facility description}
+    
+        
+    \section{Experiments}
+    
+    
+    \section{Conclusions}
+
+    
+    \renewcommand{\bibname}{References}
+        \printbibliography
+        \addcontentsline{toc}{section}{References}
+
+    \begin{appendices}
+    
+    \end{appendices}
+\end{document}

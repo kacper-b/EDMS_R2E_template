@@ -1,0 +1,192 @@
+%%% PACKAGES %%%
+
+% Page setup
+\usepackage[left=3.5cm,right=2.5cm,top=3cm,bottom=2cm,includeheadfoot]{geometry}
+%\usepackage[left=3.25cm,right=2.75cm,top=3cm,bottom=2cm,includeheadfoot]{geometry}
+%\usepackage[left=2.75cm,right=3.25cm,top=3cm,bottom=2cm,includeheadfoot,asymmetric]{geometry}
+%\usepackage[top=2cm,bottom=4cm,left=1.5cm,right=3cm,asymmetric]{geometry}
+%\usepackage{german}
+%\usepackage[ansinew]{inputenc}
+%\renewcommand{\baselinestretch}{2} 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{braket}
+%\usepackage{cite}
+\usepackage{caption}
+%\usepackage{afterpage}
+%\usepackage{footnote}
+%\usepackage{longtable}
+% \usepackage{import}
+%\usepackage{scrextend}
+%\deffootnote{0em}{1.6em}{\thefootnotemark.\enskip}
+
+\usepackage{setspace}
+
+\usepackage[toc,page]{appendix}
+
+%\usepackage{titlesec}
+
+%\titlespacing*{\section}
+%{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+%\titlespacing*{\subsection}
+%{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\usepackage[parfill]{parskip}
+% url breaks
+\usepackage{url}
+
+\usepackage{ragged2e}
+
+%% copyright symbols
+\usepackage{textcomp}
+
+%% Appendices %%
+\usepackage[titletoc]{appendix}
+
+\usepackage{tocloft}
+\renewcommand{\cftdot}{}
+
+%% include pdf pages
+\usepackage{pdfpages}
+
+%% Glossaries
+%\usepackage[doublespacing]{setspace}
+%\usepackage[nopostdot,style=super,nonumberlist,toc]{glossaries}
+
+\usepackage[acronym,nonumberlist,nogroupskip,nopostdot]{glossaries}
+\makeglossaries
+%\usepackage[nogroupskip,nonumberlist,nopostdot]{glossaries}
+%\setacronymstyle{long-sc-short}
+%\makenoidxglossaries
+\usepackage{multirow}
+
+\usepackage{booktabs}
+
+
+\usepackage{array}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Tables with head, mid and bottom rule.
+% \usepackage{tabularx}
+% \newcolumntype{Z}{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X}
+% \newcolumntype{n}{X}
+% \newcolumntype{s}{>{\hsize=.6\hsize}X}
+% \newcolumntype{u}{>{\hsize=.4\hsize}X}
+% \newcolumntype{l}{>{\hsize=2\hsize}X}
+% \newcolumntype{q}{>{\hsize=.75\hsize}X}
+% \newcolumntype{w}{>{\hsize=1.25\hsize}X}
+
+\usepackage{dcolumn}
+\usepackage{booktabs}
+
+\usepackage{pdflscape}
+\usepackage{rotating}
+
+\newcommand{\paperw}{.85\textwidth}
+%\newcommand{\plotws}{.7\columnwidth}
+%\newcommand{\plotwss}{.6\columnwidth}
+%\newcommand{\ploth}{200px}
+
+% Definitions for plot and tab width.
+
+
+\newcommand{\plotw}{.8\columnwidth}
+\newcommand{\plotws}{.7\columnwidth}
+\newcommand{\plotwss}{.6\columnwidth}
+\newcommand{\ploth}{200px}
+
+% \newcommand{\ploth}{200px}
+
+\newcommand{\picw}{.8\columnwidth}
+\newcommand{\picws}{.6\columnwidth}
+\newcommand{\picwss}{.7\columnwidth}
+
+%\newcommand{\}{.8\columnwidth}
+\newcommand{\tabwl}{1\columnwidth}
+\newcommand{\tabw}{.9\columnwidth}
+\newcommand{\tabws}{.8\columnwidth}
+\newcommand{\tabwss}{.6\columnwidth}
+
+\usepackage[euler]{textgreek}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.5}
+\usepgfplotslibrary{dateplot}
+
+% \usepackage[
+% singlelinecheck=false % <-- important
+% ]{caption}
+
+% no indent  
+\setlength\parindent{0pt}
+
+%Kopf- und Fu§zeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+%\newcommand*\NewPage{\newpage\null\thispagestyle{empty}\newpage}
+\newcommand*\NewPage{\newpage\null\newpage}
+
+%Kopfzeile links bzw. innen
+\fancyhead[L]{}
+%Kopfzeile rechts bzw. au§en
+\fancyhead[R]{}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+
+%\setlength{\footnotesep}{0.5cm}
+
+\renewcommand*\footnoterule{}
+\usepackage[bottom,hang,flushmargin]{footmisc}
+
+
+% footnote in footer
+\newcommand{\fancyfootnotetext}[2]{%
+  \fancypagestyle{dingens}{%
+    \fancyfoot[LO,RE]{\parbox{12cm}{\footnotemark[#1]\footnotesize #2}}%
+  }%
+  \thispagestyle{dingens}%
+}
+
+\setlength{\footnotesep}{0.4cm}
+%\addtolength{\footskip}{5mm}
+\setlength{\footnotemargin}{3mm}
+
+%Fu§zeile mittig
+\fancyfoot[C]{\thepage}
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+
+
+
+%% New definitions
+% Plot width
+%\def \plotw {.8\textwidth}
+
+% Color definitions
+\definecolor{cernblue}{RGB}{0,83,161}
+
+% figure ref
+\newcommand{\figref}[1]{Fig.\,\ref{#1}}
+
+% table ref
+\newcommand{\tabref}[1]{Tab.\,\ref{#1}}
+
+% equation ref
+\newcommand{\equationref}[1]{Eq.\,(\ref{#1})}
+
+
+% section ref
+\newcommand{\secref}[1]{section\,\ref{#1}}
+
+% appendix ref
+\newcommand{\appref}[1]{appendix\,\ref{#1}}
